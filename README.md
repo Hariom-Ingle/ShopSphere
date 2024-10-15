@@ -3,7 +3,9 @@
 This is a full-stack e-commerce application designed for modern online shopping experiences, utilizing cutting-edge technologies. The platform supports seamless user interaction, product management, secure payments, and analytics.
 
 
+![Your paragraph text (7)](https://github.com/user-attachments/assets/b37dc4c4-07b7-4ca0-a197-87d603f3228d)
 ## 🚀 Tech Stack
+
 
 - **Frontend**: React.js ⚛️
 - **Backend**: Node.js (Express) 🌐
