@@ -1,6 +1,6 @@
+import { stripe } from "../lib/stripe.js";
 import Coupon from "../models/coupon.model.js";
 import Order from "../models/order.model.js";
-import { stripe } from "../lib/stripe.js";
 
 export const createCheckoutSession = async (req, res) => {
 	try {
@@ -44,25 +44,26 @@ export const createCheckoutSession = async (req, res) => {
 			success_url: `${process.env.CLIENT_URL}/purchase-success?session_id={CHECKOUT_SESSION_ID}`,
 			cancel_url: `${process.env.CLIENT_URL}/purchase-cancel`,
 			discounts: coupon
-				? [
-						{
-							coupon: await createStripeCoupon(coupon.discountPercentage),
-						},
+			  ? [
+					{
+					  coupon: await createStripeCoupon(coupon.discountPercentage),
+					},
 				  ]
-				: [],
+			  : [],
 			metadata: {
-				userId: req.user._id.toString(),
-				couponCode: couponCode || "",
-				products: JSON.stringify(
-					products.map((p) => ({
-						id: p._id,
-						quantity: p.quantity,
-						price: p.price,
-					}))
-				),
+			  userId: req.user._id.toString(),
+			  couponCode: couponCode || "",
+			  products: JSON.stringify(
+				products.map((p) => ({
+				  id: p._id,
+				  quantity: p.quantity,
+				  price: p.price,
+				}))
+			  ),
 			},
-		});
-
+		  });
+		  
+ 
 		if (totalAmount >= 20000) {
 			await createNewCoupon(req.user._id);
 		}
