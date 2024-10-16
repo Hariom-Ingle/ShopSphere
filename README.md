@@ -7,13 +7,13 @@ This is a full-stack e-commerce application designed for modern online shopping 
 ## 🚀 Tech Stack
 
 
-- **Frontend**: React.js ⚛️
-- **Backend**: Node.js (Express) 🌐
-- **Database**: MongoDB 🍃
-- **Image Storage**: Cloudinary ☁️
-- **Payment Gateway**: Stripe 💳
-- **In-memory Cache**: Redis 🏎️
-- **Data Visualization**: Recharts 📊
+-  ⚛️ **Frontend**: React.js
+-  🌐 **Backend**: Node.js (Express) 
+-  🍃 **Database**: MongoDB 
+-  ☁️ **Image Storage**: Cloudinary 
+-  💳 **Payment Gateway**: Stripe  
+-  🏎️ **In-memory Cache**: Redis  
+-  📊 **Data Visualization**: Recharts  
 
 ## ✨ Key Features
 
